@@ -15,7 +15,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(cors({
-  origin: [ 'http://localhost:3000'], 
+  origin: [ 'http://localhost:3000', 'https://blissy-e-commerce.onrender.com'], 
   credentials: true,
 }));
 
