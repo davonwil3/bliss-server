@@ -80,14 +80,7 @@ app.post("/image", function(req, res) {
     });
 });
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'), function(err) {
-    if (err) {
-      console.log(err);
-      res.status(500).send(err);
-    }
-  });
-});
+
 
 app.listen(10000, () => {
   console.log('Server is running on port 10000');
