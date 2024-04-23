@@ -47,19 +47,7 @@ for (let i = 0; i < collections.images.length; i++) {
   col.price = collections.images[i].price;
   colArray[i] = col;
 }
-Image.find({}).then(foundImages => {
-  if (foundImages.length < 54) {
-    Image.insertMany(colArray)
-      .then(() => {
-        console.log("success");
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }
-}).catch(err => {
-  console.error(err);
-});
+
 
 app.post("/image", function(req, res) {
   const query = Image.where({ name: req.body.name });
